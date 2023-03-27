@@ -46,9 +46,9 @@ values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러�
 	
 	
 	
-select * from board;
+select rownum from board;
 
-select * from (select * from (select rownum as rn , t.* from (select * from board order by num desc) t) where rn <=10) where rn>=1;
+select * from (select * from (select rownum as rn , t.* from (select * from board order by num desc) t) where rn <=20) where rn>=11;
 
 
 create table reply (
@@ -68,7 +68,23 @@ select * from reply;
 alter table board add imgfilename varchar2(50);
 
 -- 게시글 갯수에 나오는구나 이게 좋다
-select rownum as rn , t.* from (select * from board order by num desc) t 
+select rownum as rn , t.* from (select * from board order by num desc) t;
 
 select * from board;
 select * from qna;
+select * from member;
+
+-- 중요한점 여기서 DB연결하기 server에서의 설정 
+/*
+ *  
+ * <Resource name="jdbc/myoracle" auth="Container"
+
+type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"
+
+url="jdbc:oracle:thin:@127.0.0.1:1521:xe"
+
+username="scott" password="tiger" maxTotal="20" maxIdle="10"
+
+maxWaitMillis="-1"/>
+
+*/

@@ -119,7 +119,7 @@ function passCheck(){
 	}
 	return true;
 }	
-
+ 
 function reply_check(){
 	if(document.frm2.reply.value==""){
 		alert("답글은 내용이 필수 입니다.");

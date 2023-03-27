@@ -24,8 +24,8 @@
 	<tr><th>등급</th><td>
 		<c:choose>
 			<c:when test="${loginUser.admin == 0 }">
-				<input type="radio" name="admin" value="0" checked="checked">
-				 일반회원<input type="radio" name="admin" value="1"> 관리자
+				<input type="radio" name="admin" value="0" checked="checked">일반회원
+				<input type="radio" name="admin" value="1"> 관리자
 			</c:when>
 			<c:otherwise>
 				<input type="radio" name="admin" value="0"> 일반회원
