@@ -7,8 +7,10 @@ DROP TABLE worker CASCADE CONSTRAINTS;
 
 
 
-
-
+select * from worker;
+select * from product;
+select * from cart;
+select * from orders;
 
 CREATE TABLE member2
 (
@@ -202,6 +204,8 @@ m. name as mname, m.zip_num, m.address, m.phone, p.name as pname, p.price2
 from orders o , order_detail d, member2 m, product p
 where o.oseq = d.oseq and o.id=m.id and d.pseq=p.pseq;
 
+select * from cart_view;
+
 create or replace view best_pro_view
 as
 select * from(
@@ -231,6 +235,7 @@ select count(*) from address;
 select * from address;
 
 select distinct oseq from order_view where id='scott' and result ='1' order by oseq desc;
+select distinct oseq from order_view where id='one' and result='1' order by oseq desc
 
 update order_detail set result='2' where oseq = 7;
 

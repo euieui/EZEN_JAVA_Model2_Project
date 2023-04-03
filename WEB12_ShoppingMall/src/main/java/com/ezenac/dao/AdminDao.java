@@ -131,7 +131,7 @@ public class AdminDao {
 		int count = 0;
 		String sql = "select count(*) as cnt from " + tableName 
 				+ " where " + fieldName + " like '%'||?||'%' " ;
-		// 필드명 like '%?%' 에서 ?가 빈칸이거나 널이면 해당 필드의 조건은 검색하지 않은것과 같아집니다.
+		// 필드명 like '%?%' 에서 ?가 빈칸이거나 널이면 해당 필드의 조건은 검색하지 않은것과 같아집니다. // 이게 중요하네
 		
 		con = Dbman.getConnection();
 		try {

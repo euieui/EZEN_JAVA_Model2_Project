@@ -23,7 +23,7 @@ public class CartInsertAction implements Action {
 			url = "shop.do?command=loginForm";
 		}else {
 			// 로그인이 되어 있다면 로그인 정보에서 id를 추출하고 상품번호와  아이디를 CartVO에 담아서
-			CartVO cvo = new CartVO();
+			CartVO cvo = new CartVO(); // 이거 new 안하고 했었던것 같아 
 			cvo.setId(mvo.getId());
 			cvo.setPseq(Integer.parseInt(request.getParameter("pseq")));  // 상품번호 저장
 			cvo.setQuantity(Integer.parseInt(request.getParameter("quantity"))); // 구매수량 저장
@@ -33,7 +33,7 @@ public class CartInsertAction implements Action {
 			url = "shop.do?command=cartList";
 		}
 		// Cart 내역을 조회해서 표시할 페이지로 이동합니다.
-		response.sendRedirect(url);
+		response.sendRedirect(url); // dispatcher 쓸 때랑 sendRedirect 쓰는거 구별?
 
 	}
 

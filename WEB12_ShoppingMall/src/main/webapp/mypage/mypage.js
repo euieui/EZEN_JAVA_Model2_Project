@@ -20,7 +20,7 @@ function go_cart_delete(){
 	// 아래 코드는 체크박스(name:cseq)의 갯수가 한개일때와 두개 이상일때를 구분하여
 	// 각각 체킹된 checkvox가 몇개인지 갯수를 세고 value 값을 얻는 코드입니다.
 	var count = 0; // 체크된 체크박스의 갯수를 카운트 하기위한 변수
-	if(document.formm.cseq.length==undefined){ // 장바구니에 물건이 하나일때, 체크박스가 하나일때
+	if(document.formm.cseq.length==undefined){ // 장바구니에 물건이 하나일때, 체크박스가 하나일때 배열이 아닌경우 undefined
 		if(document.formm.cseq.checked == true)  // 그 체크박스만 체크되어 있는지 확인
 			conut ++;
 	} else{

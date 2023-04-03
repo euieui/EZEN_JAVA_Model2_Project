@@ -37,6 +37,7 @@ import com.ezenac.controller.action.ResetPwAction;
 import com.ezenac.controller.admin.action.AdminAction;
 
 import com.ezenac.controller.admin.action.AdminLoginAction;
+import com.ezenac.controller.admin.action.AdminLogout;
 import com.ezenac.controller.admin.action.AdminOrderListAction;
 import com.ezenac.controller.admin.action.AdminOrderSaveAction;
 import com.ezenac.controller.admin.action.AdminProductDetailAction;
@@ -103,6 +104,7 @@ public class ActionFactory {
 		 else if (command.equals("adminQnaList")) ac = new AdminQnaListAction();
 		 else if (command.equals("adminQnaDetail")) ac = new AdminQnaDetailAction();
 		 else if (command.equals("adminQnaRepsave")) ac = new AdminQnaRepsave();
+		 else if (command.equals("adminLogout")) ac = new AdminLogout();
 		 
 		
 		 
